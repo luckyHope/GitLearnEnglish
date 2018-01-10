@@ -1,11 +1,11 @@
-﻿<Window x:Class="LearnEnglish.MainWindow"
+﻿<Window x:Class="LearnEnglish.View.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LearnEnglish"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="646.674">
+        Title="MainWindow" Height="350" Width="500">
     <Grid>
         <Label x:Name="LblWorld" Content="Label" Margin="20,96,20,0" VerticalAlignment="Top" Height="40" HorizontalAlignment="Center"/>
         <Button x:Name="BtnVocabulary" Content="К словарю" HorizontalAlignment="Left" Margin="518,10,0,0" VerticalAlignment="Top" Width="111" Height="29" RenderTransformOrigin="1.472,0.43"/>
