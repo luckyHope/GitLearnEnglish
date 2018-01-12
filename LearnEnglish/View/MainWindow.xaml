@@ -7,8 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="500">
     <Grid>
+        <DockPanel VerticalAlignment="Top">
+            <Menu>
+                <MenuItem Header="Словарь">
+                    <MenuItem Header="Открыть словарь"/>
+                    <MenuItem Header="Добавить слово"/>
+                </MenuItem>
+                <MenuItem Header="Настройки">
+                </MenuItem>
+            </Menu>
+        </DockPanel>
         <Label x:Name="LblWorld" Content="Label" Margin="20,96,20,0" VerticalAlignment="Top" Height="40" HorizontalAlignment="Center"/>
-        <Button x:Name="BtnVocabulary" Content="К словарю" HorizontalAlignment="Left" Margin="518,10,0,0" VerticalAlignment="Top" Width="111" Height="29" RenderTransformOrigin="1.472,0.43"/>
-        <Button x:Name="BtnNext" Content="Следующий" HorizontalAlignment="Center" VerticalAlignment="Center" Width="180" Height="42" Margin="0,150,0,0"/>
+        <Button x:Name="BtnNext" Content="Начать" HorizontalAlignment="Center" VerticalAlignment="Center" Width="180" Height="42" Margin="0,150,0,0"/>
     </Grid>
 </Window>
