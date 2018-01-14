@@ -10,18 +10,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LearnEnglish.ViewModels;
 
-namespace LearnEnglish.View
+namespace LearnEnglish.Views
 {
     /// <summary>
-    /// Interaction logic for Vocabulary.xaml
+    /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class Vocabulary : Window
+    public partial class MainWindow : Window
     {
-        public Vocabulary()
+        public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new WordsViewModel();
         }
     }
 }

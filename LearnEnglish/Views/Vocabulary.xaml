@@ -1,11 +1,11 @@
-﻿<Window x:Class="LearnEnglish.View.Vocabulary"
+﻿<Window x:Class="LearnEnglish.Views.Vocabulary"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:LearnEnglish.View"
+        xmlns:local="clr-namespace:LearnEnglish.Views"
         mc:Ignorable="d"
-        Title="Vocabulary" Height="300" Width="300">
+        Title="Vocabulary" Height="300" Width="300" WindowStartupLocation="Manual">
     <Grid>
         
     </Grid>

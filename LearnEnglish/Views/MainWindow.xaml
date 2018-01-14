@@ -1,0 +1,26 @@
+﻿<Window x:Class="LearnEnglish.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LearnEnglish"
+        mc:Ignorable="d"
+        Title="LearnEnglish_Menu" Height="350" Width="500" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DockPanel VerticalAlignment="Top">
+            <Menu>
+                <MenuItem Header="Словарь">
+                    <MenuItem Header="Открыть словарь" Command="{Binding OpenVocabularyCommand}"/>
+                    <MenuItem Header="Добавить слово"/>
+                </MenuItem>
+                <MenuItem Header="Настройки">
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        
+        <Button x:Name="BtnCards" Content="Режим карточек" HorizontalAlignment="Center" VerticalAlignment="Center" Width="180" Height="42" 
+                Margin="30,213,282,68" Command="{Binding StartToCardsCommand}"/>
+        <Button x:Name="BtnStickers" Content="Режим стикеров" HorizontalAlignment="Center" VerticalAlignment="Center" Width="180" Height="42" 
+            Margin="275,213,37,68" Command="{Binding StartToStickersCommand}"/>
+    </Grid>
+</Window>
