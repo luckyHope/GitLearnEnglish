@@ -3,16 +3,31 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.ModelConfiguration.Configuration;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SQLite;
+using System.Data.Common;
+using System.Data.Entity;
+using System.Windows;
+using System.Windows.Input;
+using System.Data.SQLite.Generic;
+using System.Data;
+using System.Data.Entity.ModelConfiguration.Conventions;
+using SQLite;
+
 
 namespace LearnEnglish.Models
 {
+    [SQLite.Table ("Words")]
     public class Word : INotifyPropertyChanged
     {
+        
         private int wordId;
+        [PrimaryKey, AutoIncrement, Unique]
         public int WordId
         {
             get { return wordId; }
@@ -25,27 +40,49 @@ namespace LearnEnglish.Models
         }
 
         private string englishWord;
+        [NotNull]
         public string EnglishWord
         {
             get { return englishWord; }
             set
             {
                 if (value == englishWord) return;
-                EnglishWord = value;
+                englishWord = value;
                 OnPropertyChanged(nameof(EnglishWord));
             }
         }
 
         private string russianWord;
+        [NotNull]
         public string RussianWord
         {
             get { return russianWord; }
             set
             {
                 if (value == russianWord) return;
-                RussianWord = value;
+                russianWord = value;
                 OnPropertyChanged(nameof(RussianWord));
             }
+        }
+
+        private string contextForWord;
+        [NotNull]
+        public string ContextForWord
+        {
+            get { return contextForWord; }
+            set
+            {
+                if (value == contextForWord) return;
+                contextForWord = value;
+                OnPropertyChanged(nameof(ContextForWord));
+            }
+        }
+
+        public Word(string englishWord, string russianWord, string context)
+        {
+            this.englishWord = englishWord;
+            this.russianWord = russianWord;
+            this.contextForWord = context;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -55,11 +92,6 @@ namespace LearnEnglish.Models
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        //public Word(string englishWord, string russianWord)
-        //{
-        //    this.EnglishWord = englishWord;
-        //    this.RussianWord = russianWord;
-        //}
-
+        
     }
 }

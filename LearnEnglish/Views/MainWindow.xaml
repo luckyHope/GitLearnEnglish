@@ -11,7 +11,7 @@
             <Menu>
                 <MenuItem Header="Словарь">
                     <MenuItem Header="Открыть словарь" Command="{Binding OpenVocabularyCommand}"/>
-                    <MenuItem Header="Добавить слово"/>
+                    <MenuItem Header="Добавить слово" Command="{Binding AddWordCommand}"/>
                 </MenuItem>
                 <MenuItem Header="Настройки">
                 </MenuItem>

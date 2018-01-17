@@ -10,10 +10,9 @@ namespace LearnEnglish.ViewModels
 {
     class ApplicationContext : DbContext
     {
-        //public ApplicationContext() : base("DefaultConnection")
-        //{
-        //}
-
-        //public DbSet<Word> Words { get; set; }
+        public ApplicationContext() : base("DefaultConnection")
+        {
+        }
+        public DbSet <Word> Words { get; set; }
     }
 }
